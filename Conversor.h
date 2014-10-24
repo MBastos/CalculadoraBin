@@ -12,10 +12,14 @@
 extern "C" {
 #endif
 
-int binaryToDecimal(int array[]);
+unsigned char binaryToDecimal(int array[]);
 int addBinary(int a1[], int a2[], int result[]);
 void showBinary(int array[], int n);
 void decimalToBinary(int op1, int aOp[]);
+int somaBinaria(int aop1[], int aop2[]);
+int subtracaoBinaria(int aop1[], int aop2[]); 
+int multiplicacaoBinaria(int aop1[], int aop2[]);
+float divisaoBinaria(int aop1[], int aop2[]);
 
 
 #ifdef	__cplusplus

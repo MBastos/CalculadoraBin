@@ -4,12 +4,10 @@
         <activeConfTypeElem>1</activeConfTypeElem>
         <activeConfIndexElem>0</activeConfIndexElem>
     </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/anderson.bastos/Documents/NetBeansProjects/SomadorBinario/main.c</file>
-            <file>file:/C:/Users/anderson.bastos/Documents/NetBeansProjects/SomadorBinario/Calculadora.h</file>
-            <file>file:/C:/Users/anderson.bastos/Documents/NetBeansProjects/SomadorBinario/Conversor.c</file>
-            <file>file:/C:/Users/anderson.bastos/Documents/NetBeansProjects/SomadorBinario/Conversor.h</file>
+            <file>file:/C:/Users/anderson.bastos/Documents/NetBeansProjects/CalculadoraBin/main.c</file>
         </group>
     </open-files>
 </project-private>

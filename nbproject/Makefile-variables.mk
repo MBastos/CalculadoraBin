@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=somadorbinario
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/somadorbinario
+CND_ARTIFACT_NAME_Debug=calculadorabin
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/calculadorabin
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=somadorbinario.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/somadorbinario.tar
+CND_PACKAGE_NAME_Debug=calculadorabin.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/calculadorabin.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=somadorbinario
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/somadorbinario
+CND_ARTIFACT_NAME_Release=calculadorabin
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/calculadorabin
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=somadorbinario.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/somadorbinario.tar
+CND_PACKAGE_NAME_Release=calculadorabin.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/calculadorabin.tar
 #
 # include compiler specific variables
 #

@@ -13,6 +13,6 @@ int multiplicacao(unsigned char x, unsigned char y){
 } 
 
 float divisao(unsigned char x, unsigned char y){
-    return x/y;
+    return (x/y);
 }
 
