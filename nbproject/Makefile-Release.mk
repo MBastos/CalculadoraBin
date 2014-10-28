@@ -64,26 +64,26 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calculadorabin.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${TESTDIR}/TestFiles/f1.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calculadorabin.exe: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calculadorabin ${OBJECTFILES} ${LDLIBSOPTIONS}
+${TESTDIR}/TestFiles/f1.exe: ${OBJECTFILES}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.c} -o ${TESTDIR}/TestFiles/f1 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Calculadora.o: Calculadora.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Calculadora.o Calculadora.c
+	$(COMPILE.c) -O2 -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Calculadora.o Calculadora.c
 
 ${OBJECTDIR}/Conversor.o: Conversor.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Conversor.o Conversor.c
+	$(COMPILE.c) -O2 -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Conversor.o Conversor.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -O2 -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:
@@ -98,7 +98,7 @@ ${TESTDIR}/TestFiles/f2: ${TESTDIR}/SomaBinariaTest.o ${OBJECTFILES:%.o=%_nomain
 ${TESTDIR}/SomaBinariaTest.o: SomaBinariaTest.c 
 	${MKDIR} -p ${TESTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/SomaBinariaTest.o SomaBinariaTest.c
+	$(COMPILE.c) -O2 -I. -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/SomaBinariaTest.o SomaBinariaTest.c
 
 
 ${OBJECTDIR}/Calculadora_nomain.o: ${OBJECTDIR}/Calculadora.o Calculadora.c 
@@ -109,7 +109,7 @@ ${OBJECTDIR}/Calculadora_nomain.o: ${OBJECTDIR}/Calculadora.o Calculadora.c
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Calculadora_nomain.o Calculadora.c;\
+	    $(COMPILE.c) -O2 -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Calculadora_nomain.o Calculadora.c;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Calculadora.o ${OBJECTDIR}/Calculadora_nomain.o;\
 	fi
@@ -122,7 +122,7 @@ ${OBJECTDIR}/Conversor_nomain.o: ${OBJECTDIR}/Conversor.o Conversor.c
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Conversor_nomain.o Conversor.c;\
+	    $(COMPILE.c) -O2 -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Conversor_nomain.o Conversor.c;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Conversor.o ${OBJECTDIR}/Conversor_nomain.o;\
 	fi
@@ -135,7 +135,7 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.c
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.c;\
+	    $(COMPILE.c) -O2 -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.c;\
 	else  \
 	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
 	fi
@@ -152,7 +152,7 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calculadorabin.exe
+	${RM} ${TESTDIR}/TestFiles/f1.exe
 
 # Subprojects
 .clean-subprojects:
