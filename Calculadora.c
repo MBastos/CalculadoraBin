@@ -1,6 +1,6 @@
 #include "Calculadora.h"  
 
-int soma(unsigned char x,unsigned char y){
+int soma(int x,int y){
     return x + y;
 }
 

@@ -8,25 +8,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main() {
+#include "Conversor.h"
+
+int main() {    
     
-    int valor1 = 4;
-    int valor2 = 5;
-    unsigned char binario[8] = {1,1,1,0,1,1,1,1};
-
-    printf("Valor 1: %i\n", valor1);
-    itoa(valor1, binario, 2);
-    printf("Valor 1 em binário: %s\n", binario);
-
-    printf("Valor 2: %i\n", valor2);
-    itoa(valor2, binario, 2);
-    printf("Valor 2 em Binário: %s\n", binario);
-
-    itoa(valor1 & valor2, binario, 2);
-    printf("AND = %s\n", binario);
-
-    itoa(valor1 | valor2, binario, 2);
-    printf("OR = %s\n", binario);
+    unsigned char binario[] =  {1,1,1,0,1,1,1,1};        
+    unsigned char binario2[] = {1,1,1,0,0,0,0,0};        
+    unsigned char binario3[] = {1,1,1,0,0,0,0,0};   
+    
+    printf("Binário: %s\n\n", binario);            
+    scanf("%s", &binario);
+    
+    printf("Número Lido: %s\n\n", binario);            
+    
+    printf("Soma: %d\n", somaBinary(binario) );    
+    //printf("Binary To Decimal: %d\n", binaryToDecimal(binario2) );    
+    //printf("Binary To Decimal: %d\n", somaBinaria(binario2,binario3) );    
 
     return 0;
 }
+
