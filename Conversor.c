@@ -21,7 +21,7 @@ int addBinary(unsigned char a1[], unsigned char a2[], unsigned char result[]) {
     return c;
 }
 
-void decimalToBinary(unsigned char op1, unsigned char aOp[]) {
+void decimalToBinary(unsigned char op1, unsigned char *aOp) {
     unsigned char result, i = 0;
     do {
         result = op1 % 2;
@@ -31,40 +31,44 @@ void decimalToBinary(unsigned char op1, unsigned char aOp[]) {
     } while (op1 > 0);
 }
 
-int somaBinaria(unsigned char aop1[], unsigned char aop2[]) {
+int somaBinaria(unsigned char *aop1, unsigned char *aop2) {
     return soma(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
-unsigned char subtracaoBinaria(unsigned char aop1[], unsigned char aop2[]) {
+unsigned char subtracaoBinaria(unsigned char *aop1, unsigned char *aop2) {
     return subtracao(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
-unsigned char multiplicacaoBinaria(unsigned char aop1[], unsigned char aop2[]) {
+unsigned char multiplicacaoBinaria(unsigned char *aop1, unsigned char *aop2) {
     return multiplicacao(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
-float divisaoBinaria(unsigned char aop1[], unsigned char aop2[]) {
+float divisaoBinaria(unsigned char *aop1, unsigned char *aop2) {
     return divisao(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
-int somaBinary(unsigned char a1[]) {     
+int somaBinary(unsigned char *a1) {     
     
-    unsigned char num1[3];
-    unsigned char num2[3];
-    int i = 0, j = 7;    
+    unsigned char num1[8] = {0,0,0,0,0,0,0,0};
+    unsigned char num2[8] = {0,0,0,0,0,0,0,0};
+    
+    int i = 0, j = 5;    
     
     for(i = 0;i < 3; i++){
-        num1[i] = a1[i];        
-    }
+        num1[i] = a1[i];
+        num2[i] = a1[j];
+        j++;
+    }   
     
-    num2[0] = a1[5];
-    num2[1] = a1[6];
-    num2[2] = a1[7];
+/*
+    printf("\n\nNumero 1 gerado: %s\n", num1);
+    printf("Numero 2 gerado: %s\n", num2);
     
-    printf("Número 1: %s\n", num1);
-    printf("Número 2: %s\n\n", num2);    
-    
-    return somaBinaria( num1, num2);
+    printf("\nNumero 1 decimal: %d\n", binaryToDecimal(num1) );
+    printf("Numero 2 decimal: %d\n", binaryToDecimal(num2) );
+*/
+    return soma(binaryToDecimal(num1), binaryToDecimal(num2));  
+    //return somaBinaria( num1, num2);
 }
 
 

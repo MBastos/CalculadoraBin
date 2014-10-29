@@ -12,18 +12,18 @@
 
 int main() {    
     
-    unsigned char binario[] =  {1,1,1,0,1,1,1,1};        
-    unsigned char binario2[] = {1,1,1,0,0,0,0,0};        
-    unsigned char binario3[] = {1,1,1,0,0,0,0,0};   
+    unsigned char binario[8]  = {0,0,0,0,0,0,0,0};        
+    unsigned char binario2[8] = {0,1,1,0,0,0,0,0};        
+    unsigned char binario3[8] = {1,1,1,0,0,0,0,0};   
     
-    printf("Binário: %s\n\n", binario);            
-    scanf("%s", &binario);
+             
+    scanf("%s", &binario);   
+        
+    printf("Binary to Decimal: %d \n", somaBinaria(binario2,binario3) );
     
-    printf("Número Lido: %s\n\n", binario);            
+    printf("Binary to Decimal: %d \n", binaryToDecimal(binario2) );
     
-    printf("Soma: %d\n", somaBinary(binario) );    
-    //printf("Binary To Decimal: %d\n", binaryToDecimal(binario2) );    
-    //printf("Binary To Decimal: %d\n", somaBinaria(binario2,binario3) );    
+    printf("Soma: %d\n", somaBinary(binario) );             
 
     return 0;
 }
