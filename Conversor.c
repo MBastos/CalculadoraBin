@@ -60,14 +60,21 @@ int somaBinary(unsigned char *a1) {
         j++;
     }   
     
-/*
+    
+    if( a1[3] && a1[4] )
+        return somaBinaria( num1, num2 );
+    else
+        if( !a1[3] && !a1[4] )
+            return subtracaoBinaria( num1, num2 );
+    
+    
     printf("\n\nNumero 1 gerado: %s\n", num1);
     printf("Numero 2 gerado: %s\n", num2);
     
     printf("\nNumero 1 decimal: %d\n", binaryToDecimal(num1) );
     printf("Numero 2 decimal: %d\n", binaryToDecimal(num2) );
-*/
-    return soma(binaryToDecimal(num1), binaryToDecimal(num2));  
+    
+    //return soma(binaryToDecimal(num1), binaryToDecimal(num2));  
     //return somaBinaria( num1, num2);
 }
 

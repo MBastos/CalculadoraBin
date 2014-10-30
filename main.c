@@ -16,14 +16,15 @@ int main() {
     unsigned char binario2[8] = {0,1,1,0,0,0,0,0};        
     unsigned char binario3[8] = {1,1,1,0,0,0,0,0};   
     
-             
-    scanf("%s", &binario);   
-        
+    printf("Número binário");
+    scanf("%u", &binario);       
+   
+    printf("Soma: %d\n", somaBinary(&binario) );             
+    
     printf("Binary to Decimal: %d \n", somaBinaria(binario2,binario3) );
     
     printf("Binary to Decimal: %d \n", binaryToDecimal(binario2) );
     
-    printf("Soma: %d\n", somaBinary(binario) );             
 
     return 0;
 }
