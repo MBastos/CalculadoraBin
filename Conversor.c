@@ -6,7 +6,9 @@
 int binaryToDecimal(unsigned char array[]) {
     int sum = 0, i;
     for (i = 0; i < 8; i++) {
-        if (array[i]) sum += pow(2, i);
+        if (array[i]) 
+            sum += pow(2, i);
+        
     }
     return sum;
 }
@@ -32,6 +34,8 @@ void decimalToBinary(unsigned char op1, unsigned char *aOp) {
 }
 
 int somaBinaria(unsigned char *aop1, unsigned char *aop2) {
+    printf("\nBinatyToDecimal: %d", binaryToDecimal(aop1) );
+    printf("\nBinatyToDecimal: %d", binaryToDecimal(aop2) );
     return soma(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
@@ -47,10 +51,12 @@ float divisaoBinaria(unsigned char *aop1, unsigned char *aop2) {
     return divisao(binaryToDecimal(aop1), binaryToDecimal(aop2));
 }
 
-int somaBinary(unsigned char *a1) {     
+int somaBinary(unsigned char a1[]) {     
     
-    unsigned char num1[8] = {0,0,0,0,0,0,0,0};
-    unsigned char num2[8] = {0,0,0,0,0,0,0,0};
+    printf("\n\nBinário: %s", a1);
+    
+    unsigned char num1[] = {0,0,0,0,0,0,0,0};
+    unsigned char num2[] = {0,0,0,0,0,0,0,0};   
     
     int i = 0, j = 5;    
     
@@ -60,22 +66,23 @@ int somaBinary(unsigned char *a1) {
         j++;
     }   
     
+    printf("\n\nBinário: %s", a1);
     
-    if( a1[3] && a1[4] )
+    if( a1[3] == '0' && a1[4] == '0' ){
+        printf("\nSoma");
         return somaBinaria( num1, num2 );
-    else
-        if( !a1[3] && !a1[4] )
+    } else 
+        if( a1[3] == '1' && a1[4] == '1' ){
+            printf("\nSubtracao");
             return subtracaoBinaria( num1, num2 );
-    
-    
-    printf("\n\nNumero 1 gerado: %s\n", num1);
-    printf("Numero 2 gerado: %s\n", num2);
-    
-    printf("\nNumero 1 decimal: %d\n", binaryToDecimal(num1) );
-    printf("Numero 2 decimal: %d\n", binaryToDecimal(num2) );
-    
-    //return soma(binaryToDecimal(num1), binaryToDecimal(num2));  
-    //return somaBinaria( num1, num2);
+        } else
+            if( a1[3] == '1' && a1[4] == '0' ){
+                printf("\nMultiplicação");
+                return multiplicacaoBinaria( num1, num2 );
+            } else{                
+                   printf("\nDivisão");
+                   return divisaoBinaria( num1, num2 );
+                }               
 }
 
 

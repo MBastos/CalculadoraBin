@@ -13,18 +13,18 @@
 int main() {    
     
     unsigned char binario[8]  = {0,0,0,0,0,0,0,0};        
-    unsigned char binario2[8] = {0,1,1,0,0,0,0,0};        
+    unsigned char binario2[8] = {0,0,0,0,0,0,0,0};        
     unsigned char binario3[8] = {1,1,1,0,0,0,0,0};   
     
-    printf("Número binário");
-    scanf("%u", &binario);       
+    //printf("\nNúmero binário");
+    //scanf("%s", &binario); 
+    
+    binario2[1] = 1;
+    binario2[2] = 1;
    
-    printf("Soma: %d\n", somaBinary(&binario) );             
+     printf("\nSoma: %d\n", binaryToDecimal(binario2) );    
     
-    printf("Binary to Decimal: %d \n", somaBinaria(binario2,binario3) );
-    
-    printf("Binary to Decimal: %d \n", binaryToDecimal(binario2) );
-    
+    //printf("\nSoma: %d\n", somaBinary(&binario) );    
 
     return 0;
 }
